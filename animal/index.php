@@ -82,6 +82,25 @@ background-color: beige;
 
 <body>
 
+<div class="hero p-4 mb-3 text-center">
+    <img class="userImage" src="../picture/admavatar.png" alt="admavatar">
+    <p class="text-dark fs-2">Administrator <?php echo $rowd['first_name'] . " " . $rowd['last_name']; ?></p>
+</div>
+
+    <div class="manageProduct w-75 mt-3">
+        <div class='m-4'>
+            <a href="create.php"><button class='btn btn-primary' type="button">Add </button></a>
+            <a href="../dashboard.php"><button class='btn btn-success' type="button">Dashboard</button></a>
+        </div>
+    </div>
+    <div class="container">
+        <p class='h2'>Animal</p>
+            <div class="container">
+                <div class="row">
+                <?= $tbody; ?>
+                </div>
+            </div>
+    </div>
 </body>
 
 </html>
