@@ -3,7 +3,7 @@
 $localhost = "localhost";
 $username = "root";
 $password = "";
-$dbname = "be17_cr5_animal_adoption_marko";
+$dbname = "be17_cr5_animal_adoption_marko_dzomba";
 
 // create connection
 $connect = new  mysqli($localhost, $username, $password, $dbname);
