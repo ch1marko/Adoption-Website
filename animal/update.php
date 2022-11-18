@@ -46,8 +46,9 @@ if ($_GET['id']) {
     <style type="text/css">
     fieldset {
         margin: auto;
-        margin-top: 100px;
+        margin-top: 3%;
         width: 60%;
+        background-color: #fdfdfd;
     }
 
     .img-thumbnail {
@@ -58,7 +59,7 @@ if ($_GET['id']) {
 </head>
 
 <body>
-    <fieldset>
+    <fieldset class="border border-dark rounded border-2 p-3">
         <legend class='h2'>Update request <img class='img-thumbnail rounded-circle' src='../picture/<?php echo $picture ?>' alt="<?php echo $name ?>"><?php echo $name ?></legend>
         <form action="actions/a_update.php" method="post" enctype="multipart/form-data">
             <table class="table">

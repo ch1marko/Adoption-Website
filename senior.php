@@ -13,14 +13,12 @@ if (!isset($_SESSION['adm']) && !isset($_SESSION['user'])) {
     exit;
 }
 
-
 $res = mysqli_query($connect, "SELECT * FROM user WHERE id=" . $_SESSION['user']);
 $row = mysqli_fetch_array($res, MYSQLI_ASSOC);
 
-
-
-$sql = "SELECT * FROM animal  WHERE status = 'Available'";
+$sql = "SELECT * FROM animal WHERE age > 8 "; 
 $result = mysqli_query($connect, $sql);
+
 $tbody = ''; 
 if (mysqli_num_rows($result)   > 0) {
     while ($rowp = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -30,7 +28,6 @@ if (mysqli_num_rows($result)   > 0) {
             <img src='picture/" . $rowp['picture'] . "' class='card-img-top' alt='...'>
                 <div class='card-body shadow-lg'>
                 <h5 class='card-title'>" . $rowp['name'] . "</h5>
-                <p class='card-text'><span class = 'fw-bold'>Live : </span>" . $rowp['live'] . "</p>
                 <p class='card-text'><span class = 'fw-bold'>Location : </span>" . $rowp['location'] . "</p>
                 <p class='card-text'><span class = 'fw-bold'>Status : </span>" . $rowp['status'] . "</p>
                 <p class='card-text'><span class = 'fw-bold'>Vaccinated : </span>" . $rowp['vaccinated'] . "</p>
@@ -48,7 +45,6 @@ if (mysqli_num_rows($result)   > 0) {
     $tbody =  "<tr><td colspan='5'><center>No Data Available </center></td></tr>";
 }
 
-
 mysqli_close($connect);
 ?>
 
@@ -58,51 +54,37 @@ mysqli_close($connect);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome<?php echo $row['first_name']; ?></title>
+    <title>Welcome - <?php echo $row['first_name']; ?></title>
     <?php require_once 'components/boot.php' ?>
     <style>
     .userImage {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
     }
 
     .hero {
-       background-color: beige;
-    }
+background-color: beige;    
+}
     </style>
 </head>
 
 <body>
-    <div class="container-fluid m-0 p-0 text-center">
+<div class="container-fluid m-0 p-0 text-center">
         <div class="hero p-4 mb-3">
-            <div class ="row">
-                <div class ="col-8">
+            <div class ="row row-cols-4">
+                <div class ="col">
                     <img class="userImage rounded-circle" src="picture/<?php echo $row['picture']; ?>" alt="<?php echo $row['first_name']; ?>">
-                    <h2 class="text-white mt-4"><strong class = "text-dark">&nbsp; Nice to see you again, 
-                        <?php echo $row['first_name'] . " " . $row['last_name']; ?></strong> </h2>
                 </div>
-                <div class ="col-4">
-                    <a href="logout.php?logout" class="btn btn-danger">Sign Out</a>
-                    <a href="update.php?id=<?php echo $_SESSION['user'] ?>" class="btn btn-success">Update Profile</a>
+                <div class = "col">
+                <h2 class="text-white mt-4"><strong class = "text-dark">Hi, &nbsp;<?php echo $row['first_name'] ?>!
+                <p> Here you'll find senior animals, that are older than 8 years.</p>
+                        </strong> </h2>
                 </div>
             </div>
         </div>
     </div>
-    <div class="d-flex">
-    <div class="col-auto m-4">
-    <a href="senior.php?id=<?php echo $_SESSION['user'] ?>" class="btn btn-dark">Senior Animals</a>
-    </div>
-        <div class="dropdown col-auto m-4">
-            <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            Sort Size
-            </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="sort1.php">All Sizes</a></li>
-                    <li><a class="dropdown-item" href="sort1.php?size=small">Small</a></li>
-                    <li><a class="dropdown-item" href="sort1.php?size=medium">Medium</a></li>
-                    <li><a class="dropdown-item" href="sort1.php?size=big">Big</a></li>
-                </ul>
-            </div>
+    <div class='mb-3 col-auto m-4'>
+            <a href= "index.php"><button class='btn btn-dark'type="button" >Home</button></a>
         </div>
     <div class="container">
         <p class='h2'>Animal</p>

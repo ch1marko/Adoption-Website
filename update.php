@@ -47,7 +47,7 @@ if (isset($_POST["submit"])) {
     $pictureArray = file_upload($_FILES['picture']);
     $picture = $pictureArray->fileName;
     if ($pictureArray->error === 0) {
-        ($_POST["picture"] == "picuser.png") ?: unlink("picture/{$_POST["picture"]}");
+        ($_POST["picture"] == "avatar.png") ?: unlink("picture/{$_POST["picture"]}");
         $sql = "UPDATE user SET first_name = '$first_name', last_name = '$last_name', email = '$email', password = '$password', address = '$address', phone_number = '$phone_number',  picture = '$pictureArray->fileName' WHERE id = {$id}";
     } else {
         $sql = "UPDATE user SET first_name = '$first_name', last_name = '$last_name', email = '$email', password = '$password', address = '$address', phone_number = '$phone_number' WHERE id = {$id}";
@@ -78,7 +78,6 @@ mysqli_close($connect);
     <style type="text/css">
         fieldset {
             margin: auto;
-            margin-top: 100px;
             width: 60%;
         }
 
@@ -86,11 +85,15 @@ mysqli_close($connect);
             width: 70px !important;
             height: 70px !important;
         }
+
+        .container{
+            background-color: #fdfdff;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container border border-dark border-2 rounded p-3 mt-4">
         <div class="<?php echo $class; ?>" role="alert">
             <p><?php echo ($message) ?? ''; ?></p>
             <p><?php echo ($uploadError) ?? ''; ?></p>
