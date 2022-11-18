@@ -41,10 +41,6 @@ if (!isset($_SESSION['adm']) && !isset($_SESSION['user'])) {
                     <td><input class='form-control' type="text" name="name" placeholder="Name" /></td>
                 </tr>
                 <tr>
-                    <th>Live</th>
-                    <td><input class='form-control' type="text" name="live" placeholder="live"/></td>
-                </tr>
-                <tr>
                     <th>location</th>
                     <td><input class='form-control' type="text" name="location" placeholder="location"/></td>
                 </tr>

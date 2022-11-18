@@ -25,7 +25,6 @@ if (mysqli_num_rows($result)  > 0) {
             <img src='../picture/" . $row['picture'] . "' class='card-img-top' alt='...'>
                 <div class='card-body shadow-lg'>
                 <h5 class='card-title'>" . $row['name'] . "</h5>
-                <p class='card-text'><span class = 'fw-bold'>Live : </span>" . $row['live'] . "</p>
                 <p class='card-text'><span class = 'fw-bold'>Location : </span>" . $row['location'] . "</p>
                 <p class='card-text'><span class = 'fw-bold'>Status : </span>" . $row['status'] . "</p>
                 <p class='card-text'><span class = 'fw-bold'>Vaccinated : </span>" . $row['vaccinated'] . "</p>

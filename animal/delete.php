@@ -20,7 +20,6 @@ if ($_GET['id']) {
     $data = mysqli_fetch_assoc($result);
     if (mysqli_num_rows($result) == 1) {
         $name = $data['name'];
-        $live = $data['live'];
         $location = $data['location'];
         $dis = $data['dis'];
         $size = $data['size'];

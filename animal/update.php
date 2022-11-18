@@ -20,7 +20,6 @@ if ($_GET['id']) {
     if (mysqli_num_rows($result) == 1) {
         $data = mysqli_fetch_assoc($result);
         $name = $data['name'];
-        $live = $data['live'];
         $location = $data['location'];
         $dis = $data['dis'];
         $size = $data['size'];
@@ -66,10 +65,6 @@ if ($_GET['id']) {
                 <tr>
                     <th>Name</th>
                     <td><input class="form-control" type="text" name="name" value="<?php echo $name ?>" /></td>
-                </tr>
-                <tr>
-                    <th>live</th>
-                    <td><input class="form-control" type="text" name="live"   value="<?php echo $live ?>" /></td>
                 </tr>
                 <tr>
                     <th>Location</th>

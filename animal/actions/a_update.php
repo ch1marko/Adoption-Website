@@ -18,7 +18,6 @@ require_once '../../components/file_upload.php';
 
 if ($_POST) {
     $name = $_POST['name'];
-    $live = $_POST['live'];
     $location = $_POST['location'];
     $dis = $_POST['dis'];
     $size = $_POST['size'];
@@ -33,9 +32,9 @@ if ($_POST) {
     $picture = file_upload($_FILES['picture']); 
     if ($picture->error === 0) {
         ($_POST["picture"] == "animal.png") ?: unlink("../../picture/$_POST[picture]");
-        $sql = "UPDATE animal SET name = '$name', live = '$live', picture = '$picture->fileName', location = '$location', dis = '$dis', size = '$size', age = '$age', vaccinated = '$vaccinated', breed = '$breed', status = '$status'  WHERE id = {$id}";
+        $sql = "UPDATE animal SET name = '$name', picture = '$picture->fileName', location = '$location', dis = '$dis', size = '$size', age = '$age', vaccinated = '$vaccinated', breed = '$breed', status = '$status'  WHERE id = {$id}";
     } else {
-        $sql = "UPDATE animal SET name = '$name', live = '$live', location = '$location', dis = '$dis', size = '$size', age = '$age', vaccinated = '$vaccinated', breed = '$breed', status = '$status'  WHERE id = {$id}";
+        $sql = "UPDATE animal SET name = '$name', location = '$location', dis = '$dis', size = '$size', age = '$age', vaccinated = '$vaccinated', breed = '$breed', status = '$status'  WHERE id = {$id}";
     }
     if (mysqli_query($connect, $sql) === TRUE) {
         $class = "success";

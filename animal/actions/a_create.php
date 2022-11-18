@@ -17,7 +17,6 @@ require_once '../../components/file_upload.php';
 
 if ($_POST) {
     $name = $_POST['name'];
-    $live = $_POST['live'];
     $location = $_POST['location'];
     $dis = $_POST['dis'];
     $size = $_POST['size'];
@@ -27,13 +26,12 @@ if ($_POST) {
     $status = $_POST['status'];
     $uploadError = '';
     $picture = file_upload($_FILES['picture']);
-    $sql = "INSERT INTO animal(`name`, `live`, `picture`, `location`, `dis`, `size`, `age`, `vaccinated`, `breed`, `status`) VALUES ('$name', '$live','$picture->fileName','$location', '$dis', '$size', '$age', '$vaccinated', '$breed', '$status')";
+    $sql = "INSERT INTO animal(`name`, `picture`, `location`, `dis`, `size`, `age`, `vaccinated`, `breed`, `status`) VALUES ('$name','$picture->fileName','$location', '$dis', '$size', '$age', '$vaccinated', '$breed', '$status')";
     if (mysqli_query($connect, $sql) === true) {
         $class = "success";
         $message = "The entry below was successfully created <br>
             <table class='table w-50'><tr>
             <td> $name </td>
-            <td> $live </td>
             <td> $location </td>
             <td> $dis </td>
             <td> $size </td>
