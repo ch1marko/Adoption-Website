@@ -25,14 +25,16 @@ if (!isset($_SESSION['adm']) && !isset($_SESSION['user'])) {
     <style>
     fieldset {
         margin: auto;
-        margin-top: 100px;
+        margin-top: 5%;
         width: 60%;
+        background-color: #fdfdff;
+    
     }
     </style>
 </head>
 
 <body>
-    <fieldset>
+    <fieldset class="border border-2 border-dark rounded p-3">
         <legend class='h2'>Add Animal</legend>
         <form action="actions/a_create.php" method="post" enctype="multipart/form-data">
             <table class='table'>
@@ -41,23 +43,23 @@ if (!isset($_SESSION['adm']) && !isset($_SESSION['user'])) {
                     <td><input class='form-control' type="text" name="name" placeholder="Name" /></td>
                 </tr>
                 <tr>
-                    <th>location</th>
-                    <td><input class='form-control' type="text" name="location" placeholder="location"/></td>
+                    <th>Location</th>
+                    <td><input class='form-control' type="text" name="location" placeholder="Location"/></td>
                 </tr>
                 <tr>
-                    <th>dis</th>
-                    <td><input class='form-control' type="text" name="dis" placeholder="dis"/></td>
+                    <th>Description</th>
+                    <td><input class='form-control' type="text" name="dis" placeholder="Description"/></td>
                 </tr>
                 <th>Size</th>
                 <td> <select name="size">
-                        <option value="small">small</option>
-                        <option value="medium">medium</option>
-                        <option value="big">big</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="big">Big</option>
                     </select>
                 </td>
                 <tr>
                     <th>Age</th>
-                    <td><input class='form-control' type="number" name="age" placeholder="**"/></td>
+                    <td><input class='form-control' type="number" name="age" placeholder="Enter Age"/></td>
                 </tr>
                 <th>Vaccinated</th>
                 <td> <select name="vaccinated">
@@ -67,7 +69,7 @@ if (!isset($_SESSION['adm']) && !isset($_SESSION['user'])) {
                 </td>
                 <tr>
                     <th>Breed</th>
-                    <td><input class='form-control' type="text" name="breed" placeholder="breed"/></td>
+                    <td><input class='form-control' type="text" name="breed" placeholder="Breed"/></td>
                 </tr>
                 <tr>
                     <th>Picture</th>
@@ -80,8 +82,8 @@ if (!isset($_SESSION['adm']) && !isset($_SESSION['user'])) {
                     </select>
                 </td>
                 <tr>
-                    <td><button class='btn btn-success' type="submit">Add To List</button></td>
-                    <td><a href="index.php"><button class='btn btn-warning' type="button">Home</button></a></td>
+                    <td><button class='btn btn-danger' type="submit">Add To List</button></td>
+                    <td><a href="index.php"><button class='btn btn-success' type="button">Home</button></a></td>
                 </tr>
             </table>
         </form>

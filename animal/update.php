@@ -76,9 +76,9 @@ if ($_GET['id']) {
                 </tr>
                 <th>Size</th>
                 <td> <select name="size">
-                        <option value="small">small</option>
-                        <option value="medium">medium</option>
-                        <option value="big">big</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="big">Big</option>
                     </select>
                 </td>
                 <tr>
