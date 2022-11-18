@@ -62,12 +62,12 @@ mysqli_close($connect);
     <?php require_once 'components/boot.php' ?>
     <style>
     .userImage {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
     }
 
     .hero {
-        background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+       background-color: beige;
     }
     </style>
 </head>
@@ -78,12 +78,12 @@ mysqli_close($connect);
             <div class ="row">
                 <div class ="col-8">
                     <img class="userImage rounded-circle" src="picture/<?php echo $row['picture']; ?>" alt="<?php echo $row['first_name']; ?>">
-                    <h2 class="text-white mt-4"><strong class = "text-dark">&nbsp; Welcome back, 
+                    <h2 class="text-white mt-4"><strong class = "text-dark">&nbsp; Nice to see you again, 
                         <?php echo $row['first_name'] . " " . $row['last_name']; ?></strong> </h2>
                 </div>
                 <div class ="col-4">
                     <a href="logout.php?logout" class="btn btn-danger">Sign Out</a>
-                    <a href="update.php?id=<?php echo $_SESSION['user'] ?>" class="btn btn-warning">Update your profile</a>
+                    <a href="update.php?id=<?php echo $_SESSION['user'] ?>" class="btn btn-success">Update Profile</a>
                 </div>
             </div>
         </div>
