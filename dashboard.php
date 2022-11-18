@@ -77,7 +77,7 @@ background: beige;
 <div class="hero p-3 mb-3 text-center">
     <img class="userImage" src="picture/admavatar.png" alt="admavatar">
     <p class="text-dark fs-2">Administrator <?php echo $rowd['first_name'] . " " . $rowd['last_name']; ?></p>
-    <a href="animal/index.php" class="btn btn-success m-1">Animal</a>
+    <a href="animal/index.php" class="btn btn-success m-1">Animals</a>
     <a href="logout.php?logout" class="btn btn-danger m-1">Logout</a>
 </div>
 <div class="container">

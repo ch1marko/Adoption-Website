@@ -93,7 +93,7 @@ background-color: beige;
         </div>
     </div>
     <div class="container">
-        <p class='h2'>Animal</p>
+        <p class='h2'>Animals</p>
             <div class="container">
                 <div class="row">
                 <?= $tbody; ?>
