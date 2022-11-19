@@ -30,7 +30,6 @@ if (mysqli_num_rows($result) > 0) {
             <img src='picture/" . $rowp['picture'] . "' class='card-img-top' alt='...'>
                 <div class='card-body shadow-lg'>
                 <h5 class='card-title'>" . $rowp['name'] . "</h5>
-                <p class='card-text'><span class = 'fw-bold'>Live : </span>" . $rowp['live'] . "</p>
                 <p class='card-text'><span class = 'fw-bold'>Location : </span>" . $rowp['location'] . "</p>
                 <p class='card-text'><span class = 'fw-bold'>Status : </span>" . $rowp['status'] . "</p>
                 <p class='card-text'><span class = 'fw-bold'>Vaccinated : </span>" . $rowp['vaccinated'] . "</p>
