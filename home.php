@@ -19,7 +19,7 @@ $row = mysqli_fetch_array($res, MYSQLI_ASSOC);
 
 
 
-$sql = "SELECT * FROM animal  WHERE status = 'Available'";
+$sql = "SELECT * FROM animal  WHERE status = 'Available' OR status = 'Adopted'";
 $result = mysqli_query($connect, $sql);
 $tbody = '';
 if (mysqli_num_rows($result) > 0) {
