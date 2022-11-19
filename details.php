@@ -64,8 +64,8 @@ if (mysqli_num_rows($result) > 0) {
     <?php require_once 'components/boot.php' ?>
     <title>Details</title>
     <style>
-         body{
-            background-image: linear-gradient( 109.6deg,  rgba(45,116,213,1) 11.2%, rgba(121,137,212,1) 91.2% );
+        body {
+            background-image: linear-gradient(109.6deg, rgba(45, 116, 213, 1) 11.2%, rgba(121, 137, 212, 1) 91.2%);
         }
     </style>
 </head>
@@ -79,6 +79,8 @@ if (mysqli_num_rows($result) > 0) {
         echo $tbody;
         ?>
     </div>
+
+    <?php require_once 'components/footer.php' ?>
 
 </body>
 

@@ -72,7 +72,7 @@ if (isset($_POST["submit"])) {
 
 <body>
 
-<?php require_once 'components/navbar.php' ?>
+    <?php require_once 'components/navbar.php' ?>
 
 
     <div class="container-fluid m-0 p-0 text-center">
@@ -106,6 +106,9 @@ if (isset($_POST["submit"])) {
             <input class="btn btn-dark m-5 p-3" type="submit" name="submit">
         </form>
     </div>
+
+    <?php require_once 'components/footer.php' ?>
+
 </body>
 
 </html>
