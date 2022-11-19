@@ -69,6 +69,9 @@ background-color: beige;
 </head>
 
 <body>
+
+<?php require_once 'components/navbar.php' ?>
+
 <div class="container-fluid m-0 p-0 text-center">
         <div class="hero p-4 mb-3">
             <div class ="row row-cols-4">

@@ -71,45 +71,29 @@ mysqli_close($connect);
 
         .hero {
             background-color: beige;
+            background-position: cover;
         }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid m-0 p-0 text-center">
-        <div class="hero p-2 mb-3">
-            <div class="d-flex">
-                <div class="col-auto m-3">
-                    <a href="senior.php?id=<?php echo $_SESSION['user'] ?>" class="btn btn-dark">Senior Animals</a>
-                </div>
-                <div class="dropdown col-auto m-3">
-                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Sort Size
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="sort1.php">All Sizes</a></li>
-                        <li><a class="dropdown-item" href="sort1.php?size=small">Small</a></li>
-                        <li><a class="dropdown-item" href="sort1.php?size=medium">Medium</a></li>
-                        <li><a class="dropdown-item" href="sort1.php?size=big">Big</a></li>
-                    </ul>
-                </div>
-                <div class="col-auto">
-                    <a href="update.php?id=<?php echo $_SESSION['user'] ?>" class="btn btn-success">Update Profile</a>
-                    <a href="logout.php?logout" class="btn btn-danger m-3">Sign Out</a>
-                </div>
-            </div>
+
+    <?php require_once 'components/navbar.php' ?>
+
+    <div class="container-fluid m-0 p-0 text-center border-bottom border-dark border-1" style="--bs-border-opacity: .3;">
+        <div class="hero p-2">
             <div class="row">
-                <div class="col-8">
+                <div class="col-12">
                     <img class="userImage rounded-circle" src="picture/<?php echo $row['picture']; ?>"
                         alt="<?php echo $row['first_name']; ?>">
                     <h2 class="text-white mt-4"><strong class="text-dark">&nbsp; Nice to see you again,
-                            <?php echo $row['first_name'] . " " . $row['last_name']; ?>
+                            <?php echo $row['first_name'] . " " . $row['last_name']; ?>!
                         </strong> </h2>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="d-flex">
         <div class="col-auto m-4">
 

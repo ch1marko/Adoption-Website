@@ -88,44 +88,49 @@ if (isset($_GET["size"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sort</title>
-    <?php require_once 'components/boot.php'?>
+    <?php require_once 'components/boot.php' ?>
     <style>
-    .userImage {
-        width: 200px;
-        height: 200px;
-    }
+        .userImage {
+            width: 200px;
+            height: 200px;
+        }
 
-    .hero {
-background-color: beige;    
-}
+        .hero {
+            background-color: beige;
+        }
     </style>
 </head>
 
 <body>
 
-<div class="container-fluid m-0 p-0 text-center">
+    <?php require_once 'components/navbar.php' ?>
+
+    <div class="container-fluid m-0 p-0 text-center">
         <div class="hero p-4 mb-3">
-            <div class ="row row-cols-4">
-                <div class ="col">
-                    <img class="userImage rounded-circle" src="picture/<?php echo $rowp['picture']; ?>" alt="<?php echo $rowp['first_name']; ?>">
+            <div class="row row-cols-4">
+                <div class="col">
+                    <img class="userImage rounded-circle" src="picture/<?php echo $rowp['picture']; ?>"
+                        alt="<?php echo $rowp['first_name']; ?>">
                 </div>
-                <div class = "col">
-                <h2 class="text-white mt-4"><strong class = "text-dark">&nbsp; <?php echo $rowp['first_name'] ?>,
-                <p> We have all the things you need</p>
+                <div class="col">
+                    <h2 class="text-white mt-4"><strong class="text-dark">&nbsp;
+                            <?php echo $rowp['first_name'] ?>,
+                            <p>one of these could be your future companion!</p>
                         </strong> </h2>
                 </div>
             </div>
         </div>
     </div>
-<div class="container p-5">
-    <div class = 'row'>
-        <div class='mb-3 col-auto mr-auto'>
-            <a href= "index.php"><button class='btn btn-dark'type="button" >Home</button></a>
-        </div>
-        <div class="dropdown col-auto">
-            <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            Sort Size
-            </button>
+    <div class="container p-5">
+        <div class='row'>
+            <div class='mb-3 col-auto mr-auto'>
+                <a href="index.php"><button class='btn btn-dark' type="button">Home</button></a>
+            </div>
+            <div class="dropdown col-auto">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Sort Size
+                </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="sort1.php">All Size</a></li>
                     <li><a class="dropdown-item" href="sort1.php?size=small">Small</a></li>
@@ -133,17 +138,17 @@ background-color: beige;
                     <li><a class="dropdown-item" href="sort1.php?size=big">Big</a></li>
                 </ul>
             </div>
+        </div>
     </div>
-</div>
 
 <div class="container">
-        <p class='h2'>Animal</p>
-            <div class="container">
-                <div class="row">
-                <?= $body; ?>
-                </div>
-            </div>
+    <p class='h2'>Look, what a sweetheart!</p>
+    <div class="container">
+        <div class="row">
+            <?= $body; ?>
+        </div>
     </div>
+</div>
 
 </body>
 

@@ -66,6 +66,9 @@ if (mysqli_num_rows($result) > 0) {
 </head>
 
 <body>
+
+    <?php require_once 'components/navbar.php' ?>
+
     <div class="container">
         <?php
         echo $tbody;
