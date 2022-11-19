@@ -57,6 +57,11 @@ mysqli_close($connect);
     <title>Welcome - <?php echo $row['first_name']; ?></title>
     <?php require_once 'components/boot.php' ?>
     <style>
+
+         body{
+            background-image: linear-gradient( 109.6deg,  rgba(45,116,213,1) 11.2%, rgba(121,137,212,1) 91.2% );
+        }
+
     .userImage {
         width: 200px;
         height: 200px;

@@ -57,14 +57,15 @@ mysqli_close($connect);
     <title>Welcome - <?php echo $row['first_name']; ?></title>
     <?php require_once 'components/boot.php' ?>
     <style>
+
+         body{
+            background-image: linear-gradient( 109.6deg,  rgba(45,116,213,1) 11.2%, rgba(121,137,212,1) 91.2% );
+        }
+   
     .userImage {
         width: 200px;
         height: 200px;
     }
-
-    .hero {
-background-color: beige;    
-}
     </style>
 </head>
 
@@ -72,7 +73,7 @@ background-color: beige;
 
 <?php require_once 'components/navbar.php' ?>
 
-<div class="container-fluid m-0 p-0 text-center">
+<div class="container-fluid m-0 p-0 text-center border-bottom border-dark border-1" style="--bs-border-opacity: .3;"">
         <div class="hero p-4 mb-3">
             <div class ="row row-cols-4">
                 <div class ="col">

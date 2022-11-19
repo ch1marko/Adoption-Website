@@ -90,14 +90,16 @@ if (isset($_GET["size"])) {
     <title>Sort</title>
     <?php require_once 'components/boot.php' ?>
     <style>
+        body {
+            background-image: linear-gradient(109.6deg, rgba(45, 116, 213, 1) 11.2%, rgba(121, 137, 212, 1) 91.2%);
+        }
+
+
         .userImage {
             width: 200px;
             height: 200px;
         }
 
-        .hero {
-            background-color: beige;
-        }
     </style>
 </head>
 
@@ -141,14 +143,14 @@ if (isset($_GET["size"])) {
         </div>
     </div>
 
-<div class="container">
-    <p class='h2'>Look, what a sweetheart!</p>
     <div class="container">
-        <div class="row">
-            <?= $body; ?>
+        <p class='h2'>Look, what a sweetheart!</p>
+        <div class="container">
+            <div class="row">
+                <?= $body; ?>
+            </div>
         </div>
     </div>
-</div>
 
 </body>
 

@@ -64,21 +64,27 @@ mysqli_close($connect);
     </title>
     <?php require_once 'components/boot.php' ?>
     <style>
+        body{
+
+            background-image: linear-gradient( 109.6deg,  rgba(45,116,213,1) 11.2%, rgba(121,137,212,1) 91.2% );
+        }
         .userImage {
             width: 150px;
             height: 150px;
         }
 
         .hero {
-            background-color: beige;
+            background-image: url('https://cdn.pixabay.com/photo/2018/08/12/16/59/parrot-3601194_960_720.jpg');
             background-position: cover;
+            height: 400px;
         }
+      
     </style>
 </head>
 
 <body>
 
-    <?php require_once 'components/navbar.php' ?>
+<?php require_once 'components/navbar.php' ?>
 
     <div class="container-fluid m-0 p-0 text-center border-bottom border-dark border-1" style="--bs-border-opacity: .3;">
         <div class="hero p-2">
@@ -86,7 +92,7 @@ mysqli_close($connect);
                 <div class="col-12">
                     <img class="userImage rounded-circle" src="picture/<?php echo $row['picture']; ?>"
                         alt="<?php echo $row['first_name']; ?>">
-                    <h2 class="text-white mt-4"><strong class="text-dark">&nbsp; Nice to see you again,
+                    <h2 class="text-white mt-5"><strong class="text-light">&nbsp; Nice to see you again,
                             <?php echo $row['first_name'] . " " . $row['last_name']; ?>!
                         </strong> </h2>
                 </div>
