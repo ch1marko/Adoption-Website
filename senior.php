@@ -66,6 +66,12 @@ mysqli_close($connect);
         width: 200px;
         height: 200px;
     }
+
+    .hero {
+            background-image: url('https://cdn.pixabay.com/photo/2018/08/12/16/59/parrot-3601194_960_720.jpg');
+            background-position: cover;
+            height: 400px;
+        }
     </style>
 </head>
 
@@ -73,14 +79,14 @@ mysqli_close($connect);
 
 <?php require_once 'components/navbar.php' ?>
 
-<div class="container-fluid m-0 p-0 text-center border-bottom border-dark border-1" style="--bs-border-opacity: .3;"">
+<div class="container-fluid m-0 p-0 text-center" style="--bs-border-opacity: .3;"">
         <div class="hero p-4 mb-3">
             <div class ="row row-cols-4">
-                <div class ="col">
+                <div class ="col-12">
                     <img class="userImage rounded-circle" src="picture/<?php echo $row['picture']; ?>" alt="<?php echo $row['first_name']; ?>">
                 </div>
-                <div class = "col">
-                <h2 class="text-white mt-4"><strong class = "text-dark">Hi, &nbsp;<?php echo $row['first_name'] ?>!
+                <div class = "col-12">
+                <h2 class="text-white"><strong class = "text-light">Hi, &nbsp;<?php echo $row['first_name'] ?>!
                 <p> Here you'll find senior animals, that are older than 8 years.</p>
                         </strong> </h2>
                 </div>
@@ -91,7 +97,7 @@ mysqli_close($connect);
             <a href= "index.php"><button class='btn btn-dark'type="button" >Home</button></a>
         </div>
     <div class="container">
-        <p class='h2'>Animal</p>
+        <p class='h2'>Animals</p>
             <div class="container">
                 <div class="row">
                 <?= $tbody; ?>

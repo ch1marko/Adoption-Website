@@ -76,7 +76,7 @@ mysqli_close($connect);
         .hero {
             background-image: url('https://cdn.pixabay.com/photo/2018/08/12/16/59/parrot-3601194_960_720.jpg');
             background-position: cover;
-            height: 400px;
+            height: 100vh;
         }
       
     </style>
@@ -86,13 +86,13 @@ mysqli_close($connect);
 
 <?php require_once 'components/navbar.php' ?>
 
-    <div class="container-fluid m-0 p-0 text-center border-bottom border-dark border-1" style="--bs-border-opacity: .3;">
-        <div class="hero p-2">
+    <div class="container-fluid m-0 p-0 text-center">
+        <div class="hero p-5">
             <div class="row">
                 <div class="col-12">
-                    <img class="userImage rounded-circle" src="picture/<?php echo $row['picture']; ?>"
+                    <img class="userImage img-thumbnail border-0 mt-5" src="picture/<?php echo $row['picture']; ?>"
                         alt="<?php echo $row['first_name']; ?>">
-                    <h2 class="text-white mt-5"><strong class="text-light">&nbsp; Nice to see you again,
+                    <h2 class="text-white mt-5"><strong>&nbsp; Nice to see you again,
                             <?php echo $row['first_name'] . " " . $row['last_name']; ?>!
                         </strong> </h2>
                 </div>
@@ -108,13 +108,15 @@ mysqli_close($connect);
     </div>
     </div>
     <div class="container">
-        <p class='h2'>Animal</p>
+        <p class='h2'>Animals</p>
         <div class="container">
             <div class="row">
                 <?= $tbody; ?>
             </div>
         </div>
     </div>
+
+    <?php require_once 'components/footer.php' ?>
 </body>
 
 </html>
