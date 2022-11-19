@@ -20,12 +20,12 @@ function file_upload($picture, $source = 'user')
     } else {
         if (in_array($fileExtension, $filesAllowed)) {
             if ($fileError === 0) {
-                if ($fileSize < 5000000) { 
+                if ($fileSize < 500000) { 
 
                     $fileNewName = uniqid('') . "." . $fileExtension;
                     if ($source == 'animal') {
-                        $destination = "../../picture$fileNewName";
-                    } elseif ($source == 'user') {
+                        $destination = "../../picture/$fileNewName";
+                    } else if ($source == 'user') {
                         $destination = "picture/$fileNewName";
                     }
                     if (move_uploaded_file($fileTmpName, $destination)) {

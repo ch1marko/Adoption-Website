@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1); 
+ini_set('display_startup_errors', 1); 
+error_reporting(E_ALL); 
 session_start();
 
 if (isset($_SESSION['user']) != "") {
@@ -63,7 +66,7 @@ if ($_POST) {
 <body>
     <div class="container">
         <div class="mt-3 mb-3">
-            <h1>Update Request</h1>
+            <h1>Update request response</h1>
         </div>
         <div class="alert alert-<?php echo $class; ?>" role="alert">
             <p><?php echo ($message) ?? ''; ?></p>
