@@ -16,6 +16,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                            <a class="nav-link active text-light fw-bold" aria-current="page"
+                            href="index.php">HOME</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link active text-light fw-bold" aria-current="page"
                                 href="senior.php?id=<?php echo $_SESSION['user'] ?>">Senior Animals</a>

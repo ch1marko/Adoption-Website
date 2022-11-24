@@ -73,7 +73,7 @@ mysqli_close($connect);
         }
 
         .hero {
-            background-image: url('https://cdn.pixabay.com/photo/2018/08/12/16/59/parrot-3601194_960_720.jpg');
+            background-image: url('./picture/bird1.jpg');
             background-position: cover;
             height: 100vh;
         }
@@ -89,9 +89,9 @@ mysqli_close($connect);
         <div class="hero p-5">
             <div class="row">
                 <div class="col-12">
-                    <img class="userImage img-thumbnail border-0 mt-5" src="picture/<?php echo $row['picture']; ?>"
+                    <img class="userImage img-thumbnail border-0 p-0 mt-5" src="picture/<?php echo $row['picture']; ?>"
                         alt="<?php echo $row['first_name']; ?>">
-                    <h2 class="text-white mt-5"><strong>&nbsp; Nice to see you again,
+                    <h2 class="mt-5"><strong>&nbsp; Nice to see you again,
                             <?php echo $row['first_name'] . " " . $row['last_name']; ?>!
                         </strong> </h2>
                 </div>
