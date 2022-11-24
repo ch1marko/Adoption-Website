@@ -37,8 +37,8 @@ if (mysqli_num_rows($result) > 0) {
                 <p class='card-text'><span class = 'fw-bold'>Breed : </span>" . $rowp['breed'] . "</p>
                 <p class='card-text'><span class = 'fw-bold'>Size : </span>" . $rowp['size'] . "</p>
                 <p class='card-text'><span class = 'fw-bold'>Age : </span>" . $rowp['age'] . "</p>
-                <a href='details.php?id=" . $rowp['id'] . "' class='btn btn-warning'>Details</a>
-                <a href='adoption.php?id=" . $rowp['id'] . "' class='btn btn-primary'>Adopt Me</a>
+                <a href='details.php?id=" . $rowp['id'] . "' class='btn btn-outline-primary'>Details</a>
+                <a href='adoption.php?id=" . $rowp['id'] . "' class='btn btn-outline-success'>Adopt Me</a>
             </div>
         </div>
     </div>";

@@ -7,7 +7,7 @@ if (isset($_SESSION['user']) != "") {
     exit;
 }
 if (isset($_SESSION['adm']) != "") {
-    header("Location: dashboard.php"); 
+    header("Location: dashboard.php");
 }
 
 $error = false;
@@ -38,7 +38,7 @@ if (isset($_POST['btn-login'])) {
 
     if (!$error) {
 
-        $password = hash('sha256', $pass); 
+        $password = hash('sha256', $pass);
 
         $sql = "SELECT id, first_name, password, status FROM user WHERE email = '$email'";
         $result = mysqli_query($connect, $sql);
@@ -68,40 +68,45 @@ mysqli_close($connect);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <?php require_once 'components/boot.php' ?>
 
-<style>
+    <style>
+        body {
+            background-image: url("picture/cat13.jpg");
+        }
 
-body{
-    background-image: url("pictures/doghero1.jpg");
-}
-
-</style>
+        .container {
+            margin-top: 10%;
+        }
+    </style>
 
 </head>
 
 <body>
-    <div class="container border rounded border-dark p-2 w-50 mt-2">
-        <form class="w-75" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
-            <h2>Log-in</h2>
-            <hr />
-            <?php
-            if (isset($errMSG)) {
-                echo $errMSG;
-            }
-            ?>
+        <div class="container border rounded border-dark p-5 w-50">
+            <form class="w-75" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
+                <h1 style="color:gray; font-family: Nunito;">Please log-in or register</h1>
+                <hr />
+                <?php
+                if (isset($errMSG)) {
+                    echo $errMSG;
+                }
+                ?>
 
-            <input type="email" autocomplete="off" name="email" class="form-control" placeholder="E-mail" value="<?php echo $email; ?>" maxlength="40" />
-            <span class="text-danger"><?php echo $emailError; ?></span>
+                <input type="email" autocomplete="off" name="email" class="form-control mb-2" placeholder="E-mail" value="<?php echo $email; ?>" maxlength="40" />
+                <span class="text-danger"><?php echo $emailError; ?></span>
 
-            <input type="password" name="password" class="form-control" placeholder="Password" maxlength="15" />
-            <span class="text-danger"><?php echo $passError; ?></span>
-            <hr />
-            <button class="btn btn-block btn-primary" type="submit" name="btn-login">Sign In</button>
-            <hr />
-            <a class="btn btn-success" href="register.php">Register</a>
-        </form>
-    </div>
+                <input type="password" name="password" class="form-control" placeholder="Password" maxlength="15" />
+                <span class="text-danger"><?php echo $passError; ?></span>
+                <hr />
+                <button class="btn btn-block btn-primary" type="submit" name="btn-login">Sign In</button>
+                <hr />
+                <a class="btn btn-success" href="register.php">Register</a>
+            </form>
+        </div>
 </body>
 
 </html>
