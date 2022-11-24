@@ -68,13 +68,13 @@ mysqli_close($connect);
         }
 
         .hero {
-            background-image: url('https://cdn.pixabay.com/photo/2018/08/12/16/59/parrot-3601194_960_720.jpg');
+            background-image: url('./picture/bird1.jpg');
             background-position: cover;
-            height: 400px;
+            height: 350px;
         }
 
         .cont1 {
-            margin-top: 10%;
+            margin-top: 2%;
         }
 
         .h1 {
@@ -94,7 +94,7 @@ mysqli_close($connect);
                 <img class="userImage rounded" src="picture/<?php echo $row['picture']; ?>" alt="<?php echo $row['first_name']; ?>">
             </div>
             <div class="col-12">
-                <h2 class="text-white"><strong class="text-light">Hi, &nbsp;
+                <h2 class="text"><strong class="text" style="color:white ;">Hi, &nbsp;
                         <?php echo $row['first_name'] ?>!
                         <p> Here you'll find senior animals, that are older than 8 years.</p>
                     </strong> </h2>
