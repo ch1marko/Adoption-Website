@@ -26,7 +26,7 @@ function file_upload($picture, $source = 'user')
                     if ($source == 'animal') {
                         $destination = "../../picture/$fileNewName";
                     } else if ($source == 'user') {
-                        $destination = "picture/$fileNewName";
+                        $destination = "../../picture/$fileNewName";
                     }
                     if (move_uploaded_file($fileTmpName, $destination)) {
                         $result->error = 0;
