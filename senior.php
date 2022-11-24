@@ -40,8 +40,7 @@ if (mysqli_num_rows($result) > 0) {
             </div>
         </div>
     </div>";
-    }
-    ;
+    };
 } else {
     $tbody = "<tr><td colspan='5'><center>No Data Available </center></td></tr>";
 }
@@ -60,19 +59,26 @@ mysqli_close($connect);
     </title>
     <?php require_once 'components/boot.php' ?>
     <style>
-        body {
-            background-image: linear-gradient(109.6deg, rgba(45, 116, 213, 1) 11.2%, rgba(121, 137, 212, 1) 91.2%);
-        }
-
         .userImage {
-            width: 200px;
-            height: 200px;
+            margin-top: 5%;
+            width: auto;
+            height: 100px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            margin-bottom: 2%;
         }
 
         .hero {
             background-image: url('https://cdn.pixabay.com/photo/2018/08/12/16/59/parrot-3601194_960_720.jpg');
             background-position: cover;
             height: 400px;
+        }
+
+        .cont1 {
+            margin-top: 10%;
+        }
+
+        .h1 {
+            text-align: center;
         }
     </style>
 </head>
@@ -85,8 +91,7 @@ mysqli_close($connect);
         <div class=" hero p-4 mb-3">
         <div class="row row-cols-4">
             <div class="col-12">
-                <img class="userImage rounded-circle" src="picture/<?php echo $row['picture']; ?>"
-                    alt="<?php echo $row['first_name']; ?>">
+                <img class="userImage rounded" src="picture/<?php echo $row['picture']; ?>" alt="<?php echo $row['first_name']; ?>">
             </div>
             <div class="col-12">
                 <h2 class="text-white"><strong class="text-light">Hi, &nbsp;
@@ -97,11 +102,8 @@ mysqli_close($connect);
         </div>
     </div>
     </div>
-    <div class='mb-3 col-auto m-4'>
-        <a href="index.php"><button class='btn btn-dark' type="button">Home</button></a>
-    </div>
-    <div class="container">
-        <p class='h2'>Animals</p>
+    <div class="container cont1">
+        <h1 class="h1">Animals</h1>
         <div class="container">
             <div class="row">
                 <?= $tbody; ?>

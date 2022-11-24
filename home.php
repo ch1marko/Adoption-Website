@@ -98,7 +98,7 @@ mysqli_close($connect);
                 <div class="col-12">
                     <img class="userImage rounded" src="picture/<?php echo $row['picture']; ?>"
                         alt="<?php echo $row['first_name']; ?>">
-                    <h2 class="mt-5"><strong>&nbsp; Nice to see you again,
+                    <h2 class="mt-5" style="font-family: Nunito;"><strong>&nbsp; Nice to see you again,
                             <?php echo $row['first_name'] . " " . $row['last_name']; ?>!
                         </strong> </h2>
                 </div>
