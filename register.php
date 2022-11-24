@@ -106,7 +106,7 @@ mysqli_close($connect);
 
     <style>
          body{
-            background-image: linear-gradient( 109.6deg,  rgba(45,116,213,1) 11.2%, rgba(121,137,212,1) 91.2% );
+            background-image: url("./picture/doghero1")
         }
     </style>
 </head>

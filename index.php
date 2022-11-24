@@ -69,6 +69,15 @@ mysqli_close($connect);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <?php require_once 'components/boot.php' ?>
+
+<style>
+
+body{
+    background-image: url("pictures/doghero1.jpg");
+}
+
+</style>
+
 </head>
 
 <body>
