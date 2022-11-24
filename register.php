@@ -113,10 +113,11 @@ mysqli_close($connect);
 
         .container {
             margin-top: 7%;
-            
+
         }
 
         .register {
+            text-align: center;
             color: gray;
             font-family: Nunito;
         }
